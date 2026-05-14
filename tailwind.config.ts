@@ -1,0 +1,33 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        bg: '#0d0d0d', 'bg-2': '#141414', 'bg-3': '#1a1a1a',
+        green: '#00ff88', cyan: '#00d4ff', muted: '#6b7280',
+        border: 'rgba(255,255,255,0.08)',
+      },
+      fontFamily: {
+        mono: ['var(--font-mono)', 'JetBrains Mono', 'Fira Code', 'monospace'],
+        sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'glow-green': '0 0 24px rgba(0, 255, 136, 0.15)',
+        'glow-cyan': '0 0 24px rgba(0, 212, 255, 0.15)',
+        card: '0 1px 3px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04)',
+      },
+      animation: { 'fade-in': 'fadeIn 0.6s ease forwards', 'pulse-slow': 'pulse 4s ease-in-out infinite' },
+      keyframes: { fadeIn: { from: { opacity: '0', transform: 'translateY(10px)' }, to: { opacity: '1', transform: 'translateY(0)' } } },
+    },
+  },
+  plugins: [],
+}
+
+export default config
