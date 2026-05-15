@@ -27,6 +27,9 @@ export function Hero() {
           <a href="https://github.com/jhughesbu" target="_blank" rel="noopener noreferrer" className="px-7 py-3 border border-white/20 text-gray-300 font-semibold text-sm rounded-lg hover:border-green/40 hover:text-white active:scale-95 transition-all duration-150 font-mono">
             GitHub
           </a>
+          <a href="/Jack_Hughes_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-7 py-3 border border-white/20 text-gray-300 font-semibold text-sm rounded-lg hover:border-green/40 hover:text-white active:scale-95 transition-all duration-150 font-mono">
+            Resume
+          </a>
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-30">

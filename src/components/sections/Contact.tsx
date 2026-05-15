@@ -10,6 +10,8 @@ const LINKS = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> },
   { label: 'Email', handle: 'jackharrisonhughes@gmail.com', href: 'mailto:jackharrisonhughes@gmail.com', color: 'hover:border-green/30 hover:shadow-glow-green',
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00ff88" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> },
+  { label: 'Resume', handle: 'Download PDF', href: '/Jack_Hughes_Resume.pdf', color: 'hover:border-amber-300/40',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg> },
 ]
 
 export function Contact() {
@@ -21,7 +23,7 @@ export function Contact() {
           <h2 className="section-heading">Let&apos;s Build Something</h2>
           <p className="text-gray-400 text-[15px] max-w-md mb-14 leading-relaxed">Whether it&apos;s a project idea, a collaboration, or just a good conversation — I&apos;m reachable. No pitch decks required.</p>
         </SectionWrapper>
-        <motion.div className="grid sm:grid-cols-3 gap-4 mb-20" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-40px' }}>
+        <motion.div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-40px' }}>
           {LINKS.map(link => (
             <motion.a key={link.label} href={link.href} target={link.href.startsWith('mailto') ? undefined : '_blank'} rel="noopener noreferrer" variants={staggerItem} whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }} className={`glass-card p-6 flex flex-col items-center gap-3 text-center transition-all duration-200 ${link.color}`}>
               {link.icon}

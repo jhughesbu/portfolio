@@ -15,23 +15,23 @@ interface CorporateProject {
 const CORPORATE_PROJECTS: CorporateProject[] = [
   {
     name: 'DocuSearch',
-    attribution: 'S&P Global',
-    award: 'Hackathon Winner',
-    description: 'AI-powered document analysis platform that bulk-ingests DOCX files and surfaces the most relevant content via similarity scoring. Built solo as a Flask web app on S&P Global\'s internal Spark API, with WebSocket-driven real-time progress, parallel processing across eight worker threads, and an interactive results UI with CSV export. Took home the hackathon — and was later re-architected into a custom RAG pipeline running on Databricks for production-scale use across the org.',
+    attribution: 'S&P Global — Automation Manager, Dow Jones Indices',
+    award: '1st Place · i3 AI Hackathon',
+    description: 'Led a team of developers and subject-matter experts to take 1st place at the i3 AI Hackathon — selected over 400 teams and 1,000+ participants by a panel of C-suite judges. The win product: a full-stack LLM-driven document search tool, originally a Flask web app on the internal Spark API with bulk DOCX ingest, similarity scoring, WebSocket progress, and parallel processing. Later re-architected as a custom RAG pipeline on Databricks that ingests, parses, and semantically indexes 1,000+ equity and multi-asset methodology documents — enabling natural-language search, variant detection, and automated editing at scale.',
     stack: ['Flask', 'Python', 'Spark API', 'Databricks', 'RAG', 'WebSockets'],
     featured: true,
   },
   {
-    name: 'P/E Valuation Data Pipelines',
-    attribution: 'Alvarez & Marsal — Private Equity Services',
-    description: 'Replaced manual Excel-based portfolio company valuation tracking with end-to-end big data pipelines. Source data flows into Snowflake on a scheduled cadence, and Power BI dashboards sit on top — giving the deal team a faster, more auditable view of PortCo metrics than the legacy spreadsheet workflow.',
-    stack: ['Snowflake', 'Power BI', 'SQL', 'Power Query'],
+    name: 'P/E Valuation Pipelines & Dashboards',
+    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
+    description: 'Launched a Power BI dashboard and end-to-end ETL system serving private equity clients including General Atlantic, Silver Lake, and Patient Square Capital — credited with ~$1M in revenue impact by deepening data analytics for equity client services. Built and maintained the pipelines in Python and SQL with dbt, AWS (EC2, Lambda, S3), and Airflow orchestration, landing the data in Snowflake for Power BI to sit on top.',
+    stack: ['Python', 'SQL', 'dbt', 'AWS', 'Airflow', 'Snowflake', 'Power BI'],
   },
   {
-    name: 'PortCo Data Intake Automation',
-    attribution: 'Alvarez & Marsal — Private Equity Services',
-    description: 'Replaced thousands of manual valuation-request emails with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submitted file and data point lands in Snowflake — turning an email-and-Excel slog into a queryable dataset ready for deeper analysis.',
-    stack: ['Power Automate', 'Power Apps', 'Snowflake', 'M365'],
+    name: 'Valuation Collection Automation',
+    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
+    description: 'Replaced the manual valuation-request workflow — thousands of emails and Excel attachments each quarter — with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submission lands in Snowflake. Cut quarterly completion time by ~60 hours.',
+    stack: ['Python', 'Power Automate', 'Power Apps', 'Snowflake', 'M365'],
   },
 ]
 
