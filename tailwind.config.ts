@@ -27,10 +27,17 @@ const config: Config = {
         'fade-in': 'fadeIn 0.6s ease forwards',
         'pulse-slow': 'pulse 4s ease-in-out infinite',
         waveform: 'waveform 1.2s ease-in-out infinite',
+        'maze-solve': 'maze-solve 5s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: { from: { opacity: '0', transform: 'translateY(10px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
         waveform: { '0%, 100%': { transform: 'scaleY(0.3)', opacity: '0.5' }, '50%': { transform: 'scaleY(1)', opacity: '1' } },
+        'maze-solve': {
+          '0%': { strokeDashoffset: '1' },
+          '40%': { strokeDashoffset: '0' },
+          '65%': { strokeDashoffset: '0' },
+          '100%': { strokeDashoffset: '-1' },
+        },
       },
     },
   },
