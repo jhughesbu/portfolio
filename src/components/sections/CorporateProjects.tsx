@@ -33,6 +33,18 @@ const CORPORATE_PROJECTS: CorporateProject[] = [
     description: 'Replaced the manual valuation-request workflow — thousands of emails and Excel attachments each quarter — with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submission lands in Snowflake. Cut quarterly completion time by ~60 hours.',
     stack: ['Python', 'Power Automate', 'Power Apps', 'Snowflake', 'M365'],
   },
+  {
+    name: 'Atlas',
+    attribution: 'S&P Global — Automation Manager, Dow Jones Indices',
+    description: 'Led the build of a full-stack application that centralizes ETF launch and workflow tracking across the org. Replaced fragmented trackers and email threads with a single source of truth — saving ~20 hours a week across 200+ global stakeholders and giving leadership real-time visibility into every launch in flight.',
+    stack: ['Python', 'FastAPI', 'React', 'Snowflake'],
+  },
+  {
+    name: 'Sales Intelligence Dashboards',
+    attribution: 'Octus (formerly Reorg) — Business Intelligence Developer',
+    description: 'Built dynamic Power BI sales dashboards that supported the achievement of a $118M business target, with optimized SQL queries running against 100M+ data points in Snowflake. Also designed and ran A/B testing on Reorg\'s new bankruptcy algorithm features and UX — feedback that drove higher client adoption of the product.',
+    stack: ['Power BI', 'SQL', 'Snowflake', 'A/B Testing'],
+  },
 ]
 
 function LockIcon() {

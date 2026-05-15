@@ -31,6 +31,20 @@ export function About() {
               </div>
             </div>
           </div>
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 mt-14 pt-8 border-t border-white/[0.06]">
+            <div className="text-center">
+              <div className="font-mono text-2xl sm:text-3xl md:text-4xl font-bold text-green leading-none">30+</div>
+              <div className="font-mono text-[10px] sm:text-xs text-muted mt-2 tracking-wider uppercase">Demos Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="font-mono text-2xl sm:text-3xl md:text-4xl font-bold text-green leading-none">1,500+</div>
+              <div className="font-mono text-[10px] sm:text-xs text-muted mt-2 tracking-wider uppercase">Stakeholders Engaged</div>
+            </div>
+            <div className="text-center">
+              <div className="font-mono text-2xl sm:text-3xl md:text-4xl font-bold text-green leading-none">C-Suite</div>
+              <div className="font-mono text-[10px] sm:text-xs text-muted mt-2 tracking-wider uppercase">Audience &amp; Above</div>
+            </div>
+          </div>
         </SectionWrapper>
       </div>
     </section>
