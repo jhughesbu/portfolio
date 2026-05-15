@@ -28,6 +28,8 @@ const config: Config = {
         'pulse-slow': 'pulse 4s ease-in-out infinite',
         waveform: 'waveform 1.2s ease-in-out infinite',
         'maze-solve': 'maze-solve 5s ease-in-out infinite',
+        'doc-scan': 'doc-scan 5s ease-in-out infinite',
+        'match-reveal': 'match-reveal 5s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: { from: { opacity: '0', transform: 'translateY(10px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
@@ -37,6 +39,15 @@ const config: Config = {
           '40%': { strokeDashoffset: '0' },
           '65%': { strokeDashoffset: '0' },
           '100%': { strokeDashoffset: '-1' },
+        },
+        'doc-scan': {
+          '0%, 100%': { width: '0%' },
+          '22%': { width: 'var(--score)' },
+          '85%': { width: 'var(--score)' },
+        },
+        'match-reveal': {
+          '0%, 100%': { opacity: '0', transform: 'translateY(4px)' },
+          '38%, 85%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
