@@ -2,10 +2,13 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ProjectCard } from '@/components/ui/ProjectCard'
+import { FeaturedProject } from '@/components/ui/FeaturedProject'
 import { SectionWrapper } from '@/components/ui/SectionWrapper'
 import { FALLBACK_REPOS } from '@/lib/github'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import type { GitHubRepo } from '@/types/github'
+
+const FEATURED_REPO = 'summit-air'
 
 function SkeletonCard() {
   return (
@@ -39,11 +42,20 @@ export function Projects() {
         </SectionWrapper>
         {loading ? (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{[1,2,3].map(i => <SkeletonCard key={i} />)}</div>
-        ) : (
-          <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
-            {repos.map(repo => (<motion.div key={repo.id} variants={staggerItem}><ProjectCard repo={repo} /></motion.div>))}
-          </motion.div>
-        )}
+        ) : (() => {
+          const featured = repos.find(r => r.name === FEATURED_REPO)
+          const rest = repos.filter(r => r.name !== FEATURED_REPO)
+          return (
+            <>
+              {featured && <FeaturedProject repo={featured} />}
+              {rest.length > 0 && (
+                <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
+                  {rest.map(repo => (<motion.div key={repo.id} variants={staggerItem}><ProjectCard repo={repo} /></motion.div>))}
+                </motion.div>
+              )}
+            </>
+          )
+        })()}
       </div>
     </section>
   )
