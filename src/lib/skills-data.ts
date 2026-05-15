@@ -21,6 +21,8 @@ export const SKILLS: Skill[] = [
   { name: 'Vercel', icon: 'vercel', category: 'Cloud & Infra' },
   { name: 'Railway', icon: 'railway', category: 'Cloud & Infra' },
   { name: 'GitHub', icon: 'github', category: 'Cloud & Infra' },
+  { name: 'Premiere Pro', icon: 'premierepro', category: 'Video & VFX' },
+  { name: 'After Effects', icon: 'aftereffects', category: 'Video & VFX' },
 ]
 
-export const SKILL_CATEGORIES = ['Languages', 'Frameworks', 'Data & ML', 'Tools', 'Cloud & Infra']
+export const SKILL_CATEGORIES = ['Languages', 'Frameworks', 'Data & ML', 'Tools', 'Cloud & Infra', 'Video & VFX']
