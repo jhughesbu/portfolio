@@ -10,7 +10,7 @@ export function Skills() {
     <section id="skills" className="py-28 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionWrapper>
-          <p className="font-mono text-green text-sm mb-3">03. skills</p>
+          <p className="font-mono text-green text-sm mb-3">04. skills</p>
           <h2 className="section-heading">Tech I Work With</h2>
           <p className="text-muted text-sm font-mono mb-12">the tools, languages, and platforms I reach for</p>
         </SectionWrapper>
