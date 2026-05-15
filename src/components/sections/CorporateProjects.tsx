@@ -37,7 +37,7 @@ const CORPORATE_PROJECTS: CorporateProject[] = [
     name: 'Atlas',
     attribution: 'S&P Global — Automation Manager',
     description: 'Led the build of a full-stack application that centralizes ETF launch and workflow tracking across the org. Replaced fragmented trackers and email threads with a single source of truth — saving ~20 hours a week across 200+ global stakeholders and giving leadership real-time visibility into every launch in flight.',
-    stack: ['Power Apps', 'Power Pages', 'Power BI', 'Databricks', 'Jira', 'REST APIs'],
+    stack: ['Power Apps', 'Power Automate', 'Power BI', 'SharePoint', 'Databricks', 'Jira', 'REST APIs'],
   },
   {
     name: 'Sales Intelligence Dashboards',
