@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 export const metadata: Metadata = {
   title: 'Jack Hughes — Builder',
   description: 'Jack Hughes is a builder who ships products, tools, and systems from idea to production.',
-  openGraph: { title: 'Jack Hughes — Builder', description: 'Builder. Maker. Tinkerer. Shipper.', type: 'website' },
-  twitter: { card: 'summary_large_image', title: 'Jack Hughes — Builder', description: 'Builder. Maker. Tinkerer. Shipper.' },
+  openGraph: { title: 'Jack Hughes — Builder', description: 'Builder. Maker. Communicator. Shipper.', type: 'website' },
+  twitter: { card: 'summary_large_image', title: 'Jack Hughes — Builder', description: 'Builder. Maker. Communicator. Shipper.' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

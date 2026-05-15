@@ -10,8 +10,8 @@ export function About() {
               <p className="font-mono text-green text-sm mb-3">01. about</p>
               <h2 className="section-heading">Who I Am</h2>
               <div className="space-y-4 text-gray-400 leading-relaxed text-[15px]">
-                <p>I&apos;m Jack — a builder who sits at the intersection of product thinking and technical execution. I&apos;m most at home when I&apos;m taking something from zero to shipped: scoping the problem, picking the right stack, and getting it live.</p>
-                <p>My background spans both the business side and the code side. I&apos;ve built voice AI systems, automation pipelines, and web products — the kind of stuff where you own the whole thing, not just one layer. I care less about titles and more about whether it works.</p>
+                <p>I&apos;m Jack — a builder who sits at the intersection of product thinking, technical execution, and the conversation that connects the two. I&apos;m most at home when I&apos;m embedded with a customer: scoping the real problem, picking the right stack, and getting something live in front of them.</p>
+                <p>My background spans both the business side and the code side. I&apos;ve built voice AI systems, automation pipelines, and web products — the kind of stuff where you own the whole thing, not just one layer. I care less about titles and more about whether the thing works and the person across the table trusts it.</p>
                 <p>Outside of building things, I&apos;m drawn to how technology actually changes how people work — not the hype, but the real shifts. I&apos;m also a decent home cook, an okay golfer, and someone who reads too much about things he doesn&apos;t need to know.</p>
               </div>
             </div>
