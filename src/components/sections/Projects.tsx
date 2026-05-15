@@ -41,7 +41,7 @@ export function Projects() {
     <section id="projects" className="py-28 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionWrapper>
-          <p className="font-mono text-green text-sm mb-3">03. projects</p>
+          <p className="font-mono text-green text-sm mb-3">04. projects</p>
           <h2 className="section-heading">Things I&apos;ve Built</h2>
           <p className="text-muted text-sm font-mono mb-12">pulled live from <a href="https://github.com/jhughesbu" target="_blank" rel="noopener noreferrer" className="text-green hover:underline">github.com/jhughesbu</a></p>
         </SectionWrapper>

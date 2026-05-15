@@ -17,7 +17,7 @@ export function Contact() {
     <section id="contact" className="py-28 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionWrapper>
-          <p className="font-mono text-green text-sm mb-3">05. contact</p>
+          <p className="font-mono text-green text-sm mb-3">06. contact</p>
           <h2 className="section-heading">Let&apos;s Build Something</h2>
           <p className="text-gray-400 text-[15px] max-w-md mb-14 leading-relaxed">Whether it&apos;s a project idea, a collaboration, or just a good conversation — I&apos;m reachable. No pitch decks required.</p>
         </SectionWrapper>
