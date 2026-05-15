@@ -15,7 +15,7 @@ interface CorporateProject {
 const CORPORATE_PROJECTS: CorporateProject[] = [
   {
     name: 'DocuSearch',
-    attribution: 'S&P Global — Automation Manager, Dow Jones Indices',
+    attribution: 'S&P Global — Automation Manager',
     award: '1st Place · i3 AI Hackathon',
     description: 'Led a team of developers and subject-matter experts to take 1st place at the i3 AI Hackathon — selected over 400 teams and 1,000+ participants by a panel of C-suite judges. The win product: a full-stack LLM-driven document search tool, originally a Flask web app on the internal Spark API with bulk DOCX ingest, similarity scoring, WebSocket progress, and parallel processing. Later re-architected as a custom RAG pipeline on Databricks that ingests, parses, and semantically indexes 1,000+ equity and multi-asset methodology documents — enabling natural-language search, variant detection, and automated editing at scale.',
     stack: ['Flask', 'Python', 'Spark API', 'Databricks', 'RAG', 'WebSockets'],
@@ -35,7 +35,7 @@ const CORPORATE_PROJECTS: CorporateProject[] = [
   },
   {
     name: 'Atlas',
-    attribution: 'S&P Global — Automation Manager, Dow Jones Indices',
+    attribution: 'S&P Global — Automation Manager',
     description: 'Led the build of a full-stack application that centralizes ETF launch and workflow tracking across the org. Replaced fragmented trackers and email threads with a single source of truth — saving ~20 hours a week across 200+ global stakeholders and giving leadership real-time visibility into every launch in flight.',
     stack: ['Python', 'FastAPI', 'React', 'Snowflake'],
   },
