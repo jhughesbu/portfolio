@@ -19,8 +19,9 @@ export async function GET() {
     if (!res.ok) return NextResponse.json({ error: 'github_api_error' }, { status: 502 })
 
     const repos: GitHubRepo[] = await res.json()
+    const EXCLUDE = new Set(['hello-world', 'portfolio'])
     const filtered = repos
-      .filter(r => !r.fork && r.description)
+      .filter(r => !r.fork && r.description && !EXCLUDE.has(r.name))
       .slice(0, 6)
       .map(r => ({ id: r.id, name: r.name, description: r.description, html_url: r.html_url, homepage: r.homepage || null, language: r.language, stargazers_count: r.stargazers_count, topics: r.topics || [] }))
 
