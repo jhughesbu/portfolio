@@ -14,9 +14,9 @@ export const FALLBACK_REPOS: GitHubRepo[] = [
 export const EXTRA_PROJECTS: GitHubRepo[] = [
   {
     id: 1001, name: 'The-Maze',
-    description: 'Self-solving maze that visualizes classic pathfinding side by side — DFS, BFS, and Dijkstra race to find the exit. Java desktop app with a manual-solve mode for the player.',
+    description: 'Java maze app — generates random mazes with Kruskal\'s algorithm, then races DFS and BFS to find the exit. Includes a manual-solve mode so the player can try it themselves.',
     html_url: 'https://github.com/jhughes33/The-Maze', homepage: null, language: 'Java', stargazers_count: 0,
-    topics: ['algorithms', 'dfs', 'bfs', 'dijkstra', 'pathfinding'],
+    topics: ['algorithms', 'kruskal', 'dfs', 'bfs', 'pathfinding'],
   },
 ]
 
