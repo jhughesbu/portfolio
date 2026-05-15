@@ -17,6 +17,12 @@ const CORPORATE_PROJECTS: CorporateProject[] = [
     description: 'Replaced manual Excel-based portfolio company valuation tracking with end-to-end big data pipelines. Source data flows into Snowflake on a scheduled cadence, and Power BI dashboards sit on top — giving the deal team a faster, more auditable view of PortCo metrics than the legacy spreadsheet workflow.',
     stack: ['Snowflake', 'Power BI', 'SQL', 'Power Query'],
   },
+  {
+    name: 'PortCo Data Intake Automation',
+    attribution: 'Alvarez & Marsal — Private Equity Services',
+    description: 'Replaced thousands of manual valuation-request emails with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submitted file and data point lands in Snowflake — turning an email-and-Excel slog into a queryable dataset ready for deeper analysis.',
+    stack: ['Power Automate', 'Power Apps', 'Snowflake', 'M365'],
+  },
 ]
 
 function LockIcon() {
