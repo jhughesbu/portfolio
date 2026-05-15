@@ -19,7 +19,7 @@ export async function GET() {
     if (!res.ok) return NextResponse.json({ error: 'github_api_error' }, { status: 502 })
 
     const repos: GitHubRepo[] = await res.json()
-    const EXCLUDE = new Set(['hello-world', 'portfolio'])
+    const EXCLUDE = new Set(['hello-world'])
     const filtered = repos
       .filter(r => !r.fork && r.description && !EXCLUDE.has(r.name))
       .slice(0, 6)
