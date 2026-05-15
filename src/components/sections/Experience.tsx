@@ -9,15 +9,15 @@ interface Company {
   accent: string
   bg: string
   textClass: string
-  span?: string
 }
 
 const COMPANIES: Company[] = [
-  { name: 'AMC Networks',          blurb: 'Media',                accent: '#3B82F6', bg: 'bg-[#0E2A4A]', textClass: 'font-bold tracking-tight uppercase', span: 'sm:col-span-2' },
-  { name: 'Manulife · John Hancock', blurb: 'Financial Services', accent: '#00A758', bg: 'bg-white',     textClass: 'font-semibold text-[#1a1a1a]' },
-  { name: 'Reorg',                 blurb: 'Financial Intelligence', accent: '#60A5FA', bg: 'bg-[#1E2A47]', textClass: 'font-bold tracking-tight' },
-  { name: 'Alvarez & Marsal',      blurb: 'Consulting',           accent: '#1E40AF', bg: 'bg-white',     textClass: 'font-semibold text-[#0E2A4A]' },
-  { name: 'Blockchain Founders Fund', blurb: 'Venture Capital',   accent: '#F97316', bg: 'bg-[#0a0a0a]', textClass: 'font-bold tracking-wide uppercase text-xs sm:text-sm' },
+  { name: 'S&P Global',               blurb: 'Financial Data & Analytics', accent: '#E40023', bg: 'bg-[#0a0a0a]', textClass: 'text-white font-bold tracking-tight' },
+  { name: 'AMC Networks',             blurb: 'Media',                      accent: '#3B82F6', bg: 'bg-[#0E2A4A]', textClass: 'text-white font-bold tracking-tight uppercase' },
+  { name: 'Manulife · John Hancock',  blurb: 'Financial Services',         accent: '#00A758', bg: 'bg-white',     textClass: 'text-[#1a1a1a] font-semibold' },
+  { name: 'Reorg',                    blurb: 'Financial Intelligence',     accent: '#60A5FA', bg: 'bg-[#1E2A47]', textClass: 'text-white font-bold tracking-tight' },
+  { name: 'Alvarez & Marsal',         blurb: 'Consulting',                 accent: '#1E40AF', bg: 'bg-white',     textClass: 'text-[#0E2A4A] font-semibold' },
+  { name: 'Blockchain Founders Fund', blurb: 'Venture Capital',            accent: '#F97316', bg: 'bg-[#0a0a0a]', textClass: 'text-white font-bold tracking-wide uppercase text-xs sm:text-sm' },
 ]
 
 export function Experience() {
@@ -41,14 +41,14 @@ export function Experience() {
               key={c.name}
               variants={staggerItem}
               whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
-              className={`relative aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden border border-white/[0.08] ${c.bg} ${c.span ?? ''} group`}
+              className={`relative aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden border border-white/[0.08] ${c.bg} group`}
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ boxShadow: `inset 0 0 0 1px ${c.accent}66` }}
               />
               <div className="absolute inset-0 flex items-center justify-center px-6">
-                <span className={`text-center text-base sm:text-xl text-white ${c.textClass}`}>{c.name}</span>
+                <span className={`text-center text-base sm:text-xl ${c.textClass}`}>{c.name}</span>
               </div>
               <div
                 className="absolute bottom-0 left-0 right-0 px-4 py-2 font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300"
