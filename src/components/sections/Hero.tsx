@@ -13,7 +13,7 @@ export function Hero() {
         <div className="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-green/40 ring-offset-4 ring-offset-bg shadow-[0_0_40px_-10px_rgba(0,255,136,0.4)] animate-fade-in">
           <Image src="/headshot.jpg" alt="Jack Hughes" fill priority sizes="128px" className="object-cover" />
         </div>
-        <p className="font-mono text-sm text-muted mb-6 animate-fade-in">Hey, I&apos;m Jack —</p>
+        <p className="font-mono text-base sm:text-lg text-green mb-4 animate-fade-in">I&apos;m Jack Hughes</p>
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
           I&apos;m a{' '}<TypewriterText words={WORDS} />
         </h1>
