@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { ProjectCard } from '@/components/ui/ProjectCard'
 import { FeaturedProject } from '@/components/ui/FeaturedProject'
 import { SectionWrapper } from '@/components/ui/SectionWrapper'
-import { FALLBACK_REPOS } from '@/lib/github'
+import { FALLBACK_REPOS, EXTRA_PROJECTS } from '@/lib/github'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import type { GitHubRepo } from '@/types/github'
 
@@ -27,8 +27,13 @@ export function Projects() {
   useEffect(() => {
     fetch('/api/github')
       .then(res => res.json())
-      .then(data => setRepos(Array.isArray(data) && data.length > 0 ? data : FALLBACK_REPOS))
-      .catch(() => setRepos(FALLBACK_REPOS))
+      .then(data => {
+        const live = Array.isArray(data) && data.length > 0 ? data : FALLBACK_REPOS
+        const seen = new Set(live.map((r: GitHubRepo) => r.name))
+        const extras = EXTRA_PROJECTS.filter(r => !seen.has(r.name))
+        setRepos([...live, ...extras])
+      })
+      .catch(() => setRepos([...FALLBACK_REPOS, ...EXTRA_PROJECTS]))
       .finally(() => setLoading(false))
   }, [])
 
