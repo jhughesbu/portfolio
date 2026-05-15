@@ -18,6 +18,12 @@ export const EXTRA_PROJECTS: GitHubRepo[] = [
     html_url: 'https://github.com/jhughes33/The-Maze', homepage: null, language: 'Java', stargazers_count: 0,
     topics: ['algorithms', 'kruskal', 'dfs', 'bfs', 'pathfinding'],
   },
+  {
+    id: 1002, name: 'Pyramid-Solitaire',
+    description: 'Pyramid Solitaire built in Java with a clean MVC split — model holds the game state and rules, view/controller handles play, and cards are modeled through interfaces with dedicated Suit and Number classes.',
+    html_url: 'https://github.com/jhughes33/Pyramid-Solitaire', homepage: null, language: 'Java', stargazers_count: 0,
+    topics: ['java', 'mvc', 'oop', 'interfaces', 'game'],
+  },
 ]
 
 export const LANGUAGE_COLORS: Record<string, string> = {
