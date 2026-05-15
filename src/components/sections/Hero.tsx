@@ -21,7 +21,7 @@ export function Hero() {
           I build things that work — and I can sit in the room and explain them. Products, tools, and systems from idea to production, deployed alongside the people who use them.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="px-7 py-3 bg-green text-bg font-semibold text-sm rounded-lg hover:bg-green/90 active:scale-95 transition-all duration-150 font-mono">
+          <button onClick={() => document.getElementById('corporate-projects')?.scrollIntoView({ behavior: 'smooth' })} className="px-7 py-3 bg-green text-bg font-semibold text-sm rounded-lg hover:bg-green/90 active:scale-95 transition-all duration-150 font-mono">
             See My Work
           </button>
           <a href="https://github.com/jhughesbu" target="_blank" rel="noopener noreferrer" className="px-7 py-3 border border-white/20 text-gray-300 font-semibold text-sm rounded-lg hover:border-green/40 hover:text-white active:scale-95 transition-all duration-150 font-mono">
