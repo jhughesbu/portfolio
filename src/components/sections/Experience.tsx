@@ -15,7 +15,7 @@ const COMPANIES: Company[] = [
   { name: 'S&P Global',               blurb: 'Financial Data & Analytics', accent: '#E40023', bg: 'bg-[#0a0a0a]', textClass: 'text-white font-bold tracking-tight' },
   { name: 'AMC Networks',             blurb: 'Media',                      accent: '#3B82F6', bg: 'bg-[#0E2A4A]', textClass: 'text-white font-bold tracking-tight uppercase' },
   { name: 'Manulife · John Hancock',  blurb: 'Financial Services',         accent: '#00A758', bg: 'bg-white',     textClass: 'text-[#1a1a1a] font-semibold' },
-  { name: 'Reorg',                    blurb: 'Financial Intelligence',     accent: '#60A5FA', bg: 'bg-[#1E2A47]', textClass: 'text-white font-bold tracking-tight' },
+  { name: 'Octus',                    blurb: 'Private Credit Intelligence', accent: '#00C2B8', bg: 'bg-[#0B1416]', textClass: 'text-white font-bold tracking-tight' },
   { name: 'Alvarez & Marsal',         blurb: 'Consulting',                 accent: '#1E40AF', bg: 'bg-white',     textClass: 'text-[#0E2A4A] font-semibold' },
   { name: 'Blockchain Founders Fund', blurb: 'Venture Capital',            accent: '#F97316', bg: 'bg-[#0a0a0a]', textClass: 'text-white font-bold tracking-wide uppercase text-xs sm:text-sm' },
 ]
