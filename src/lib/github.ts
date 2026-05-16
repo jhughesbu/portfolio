@@ -19,6 +19,12 @@ export const EXTRA_PROJECTS: GitHubRepo[] = [
     topics: ['voice-ai', 'vapi', 'gpt-4o', 'express', 'airtable'],
   },
   {
+    id: 999, name: 'portfolio',
+    description: 'This site. Next.js + Tailwind, custom animated visuals for each featured project (voice call, maze solve, doc scan), deployed on Vercel. Built to position as a Forward Deployed Engineer.',
+    html_url: 'https://github.com/jhughesbu/portfolio', homepage: null, language: 'TypeScript', stargazers_count: 0,
+    topics: ['nextjs', 'tailwind', 'framer-motion', 'typescript', 'vercel'],
+  },
+  {
     id: 1001, name: 'The-Maze',
     description: 'Java maze app — generates random mazes with Kruskal\'s algorithm, then races DFS and BFS to find the exit. Includes a manual-solve mode so the player can try it themselves.',
     html_url: 'https://github.com/jhughes33/The-Maze', homepage: null, language: 'Java', stargazers_count: 0,

@@ -10,6 +10,7 @@ interface CorporateProject {
   stack: string[]
   featured?: boolean
   award?: string
+  vizType?: 'atlas' | 'valuation'
 }
 
 const CORPORATE_PROJECTS: CorporateProject[] = [
@@ -17,27 +18,29 @@ const CORPORATE_PROJECTS: CorporateProject[] = [
     name: 'DocuSearch',
     attribution: 'S&P Global — Automation Manager',
     award: '1st Place · i3 AI Hackathon',
-    description: 'Led a team of developers and subject-matter experts to take 1st place at the i3 AI Hackathon — selected over 400 teams and 1,000+ participants by a panel of C-suite judges. The win product: a full-stack LLM-driven document search tool, originally a Flask web app on the internal Spark API with bulk DOCX ingest, similarity scoring, WebSocket progress, and parallel processing. Later re-architected as a custom RAG pipeline on Databricks that ingests, parses, and semantically indexes 1,000+ equity and multi-asset methodology documents — enabling natural-language search, variant detection, and automated editing at scale.',
+    description: 'Led a team of developers and subject-matter experts to take 1st place at the i3 AI Hackathon — selected over 400 teams and 1,000+ participants by a panel of C-suite judges. The winning product: a full-stack LLM-driven document search tool, originally a Flask web app on the internal Spark API with bulk DOCX ingest, similarity scoring, WebSocket progress, and parallel processing. Later re-architected as a custom RAG pipeline on Databricks that ingests, parses, and semantically indexes 1,000+ equity and multi-asset methodology documents — enabling natural-language search, variant detection, and automated editing at scale.',
     stack: ['Flask', 'Python', 'Spark API', 'Databricks', 'RAG', 'WebSockets'],
     featured: true,
-  },
-  {
-    name: 'P/E Valuation Pipelines & Dashboards',
-    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
-    description: 'Launched a Power BI dashboard and end-to-end ETL system serving private equity clients including General Atlantic, Silver Lake, and Patient Square Capital — credited with ~$1M in revenue impact by deepening data analytics for equity client services. Built and maintained the pipelines in Python and SQL with dbt, AWS (EC2, Lambda, S3), and Airflow orchestration, landing the data in Snowflake for Power BI to sit on top.',
-    stack: ['Python', 'SQL', 'dbt', 'AWS', 'Airflow', 'Snowflake', 'Power BI'],
-  },
-  {
-    name: 'Valuation Collection Automation',
-    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
-    description: 'Replaced the manual valuation-request workflow — thousands of emails and Excel attachments each quarter — with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submission lands in Snowflake. Cut quarterly completion time by ~60 hours.',
-    stack: ['Python', 'Power Automate', 'Power Apps', 'Snowflake', 'M365'],
   },
   {
     name: 'Atlas',
     attribution: 'S&P Global — Automation Manager',
     description: 'Led the build of a full-stack application that centralizes ETF launch and workflow tracking across the org. Replaced fragmented trackers and email threads with a single source of truth — saving ~20 hours a week across 200+ global stakeholders and giving leadership real-time visibility into every launch in flight.',
     stack: ['Power Apps', 'Power Automate', 'Power BI', 'SharePoint', 'Databricks', 'Jira', 'REST APIs'],
+    vizType: 'atlas',
+  },
+  {
+    name: 'P/E Valuation Pipelines & Dashboards',
+    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
+    description: 'Launched a Power BI dashboard and end-to-end ETL system serving private equity clients including General Atlantic, Silver Lake, and Patient Square Capital — credited with ~$1M in revenue impact by deepening data analytics for equity client services. Built and maintained the pipelines in Python and SQL with dbt, AWS (EC2, Lambda, S3), and Airflow orchestration, landing the data in Snowflake for Power BI to sit on top.',
+    stack: ['Python', 'SQL', 'dbt', 'AWS', 'Airflow', 'Snowflake', 'Power BI'],
+    vizType: 'valuation',
+  },
+  {
+    name: 'Valuation Collection Automation',
+    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
+    description: 'Replaced the manual valuation-request workflow — thousands of emails and Excel attachments each quarter — with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submission lands in Snowflake. Cut quarterly completion time by ~60 hours.',
+    stack: ['Python', 'Power Automate', 'Power Apps', 'Snowflake', 'M365'],
   },
   {
     name: 'Sales Intelligence Dashboards',
@@ -144,6 +147,155 @@ function DocuSearchViz() {
   )
 }
 
+const ATLAS_STAGES = ['PLAN', 'BUILD', 'REVIEW', 'LAUNCH']
+
+const ATLAS_ETFS = [
+  { name: 'S&P 500 ESG Index',         status: 'LAUNCHED',  color: 'green' },
+  { name: 'DJ Emerging Markets Bond',  status: 'IN REVIEW', color: 'amber' },
+  { name: 'S&P Tech Pure-Play',        status: 'BUILDING',  color: 'cyan'  },
+  { name: 'DJ Sustainable Real Est.',  status: 'PLANNING',  color: 'muted' },
+]
+
+const STATUS_STYLES: Record<string, string> = {
+  green: 'bg-green/15 border-green/30 text-green',
+  amber: 'bg-amber-400/15 border-amber-300/30 text-amber-200',
+  cyan:  'bg-cyan/15 border-cyan/30 text-cyan',
+  muted: 'bg-white/[0.04] border-white/[0.08] text-muted',
+}
+
+function AtlasViz() {
+  return (
+    <div className="w-full max-w-sm space-y-4">
+      <div className="flex items-center gap-2 font-mono text-[11px] text-muted">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-75 animate-ping" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300" />
+        </span>
+        ATLAS · 14 ETFs IN FLIGHT
+        <span className="ml-auto text-amber-200/70">20 hrs/wk saved</span>
+      </div>
+
+      <div className="px-1 pt-1">
+        <div className="relative h-2">
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-amber-300/25" />
+          <div className="absolute inset-0 flex justify-between items-center">
+            {ATLAS_STAGES.map((_, i) => (
+              <span
+                key={i}
+                className="block w-2 h-2 rounded-full bg-amber-300/60 animate-atlas-stage"
+                style={{ animationDelay: `${i * 1.45}s` } as React.CSSProperties}
+              />
+            ))}
+          </div>
+          <div
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-amber-200 shadow-[0_0_10px_rgba(252,211,77,0.7)] animate-atlas-flow"
+            style={{ left: '0%' }}
+          />
+        </div>
+        <div className="mt-2 grid grid-cols-4 text-center">
+          {ATLAS_STAGES.map(s => (
+            <span key={s} className="font-mono text-[9px] uppercase tracking-widest text-muted">{s}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-1.5">
+        {ATLAS_ETFS.map(etf => (
+          <div key={etf.name} className="flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-md bg-black/20 border border-white/[0.04]">
+            <div className="flex items-center gap-1.5 min-w-0">
+              <span className="block w-1 h-1 rounded-full bg-amber-300/70 shrink-0" />
+              <span className="font-mono text-[11px] text-gray-300 truncate">{etf.name}</span>
+            </div>
+            <span className={`shrink-0 px-1.5 py-0.5 rounded border font-mono text-[9px] uppercase tracking-wider ${STATUS_STYLES[etf.color]}`}>
+              {etf.status}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div className="pt-2 mt-1 border-t border-amber-300/15 flex items-center justify-between font-mono text-[10px] text-muted uppercase tracking-wider">
+        <span>200+ stakeholders</span>
+        <span className="text-amber-200/80">single source of truth</span>
+      </div>
+    </div>
+  )
+}
+
+const VAL_BARS = [
+  { label: 'GA-01', height: 0.92 },
+  { label: 'SL-02', height: 0.68 },
+  { label: 'PS-03', height: 0.84 },
+  { label: 'GA-04', height: 0.55 },
+  { label: 'SL-05', height: 0.72 },
+  { label: 'PS-06', height: 0.41 },
+]
+
+function ValuationViz() {
+  return (
+    <div className="w-full max-w-sm space-y-4">
+      <div className="flex items-center gap-2 font-mono text-[11px] text-muted">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-75 animate-ping" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300" />
+        </span>
+        Q3 2024 · PORTCO VALUATIONS
+        <span className="ml-auto text-amber-200/70">refreshed nightly</span>
+      </div>
+
+      <div className="rounded-md bg-black/25 border border-amber-300/15 px-3 py-3">
+        <div className="flex items-end justify-between gap-2 h-28">
+          {VAL_BARS.map((b, i) => (
+            <div key={b.label} className="flex-1 flex flex-col items-center gap-1.5 h-full">
+              <div className="flex-1 w-full flex items-end">
+                <div
+                  className="w-full rounded-t-sm bg-gradient-to-t from-amber-500/80 to-amber-200 origin-bottom animate-bar-grow"
+                  style={{
+                    height: '100%',
+                    ['--bar' as string]: `${b.height}`,
+                    animationDelay: `${i * 0.18}s`,
+                  } as React.CSSProperties}
+                />
+              </div>
+              <span className="font-mono text-[8.5px] text-muted tracking-wider uppercase">{b.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-2">
+        <div className="rounded-md bg-black/20 border border-amber-300/10 px-2.5 py-2 text-center">
+          <div className="font-mono text-base font-bold text-amber-200 leading-none">$2.4B</div>
+          <div className="font-mono text-[9px] text-muted mt-1 uppercase tracking-wider">AUM</div>
+        </div>
+        <div className="rounded-md bg-black/20 border border-amber-300/10 px-2.5 py-2 text-center">
+          <div className="font-mono text-base font-bold text-amber-200 leading-none">47</div>
+          <div className="font-mono text-[9px] text-muted mt-1 uppercase tracking-wider">PortCos</div>
+        </div>
+        <div className="rounded-md bg-black/20 border border-amber-300/10 px-2.5 py-2 text-center">
+          <div className="font-mono text-base font-bold text-green leading-none">+$1M</div>
+          <div className="font-mono text-[9px] text-muted mt-1 uppercase tracking-wider">Impact</div>
+        </div>
+      </div>
+
+      <div className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest text-muted">
+        <span>source</span>
+        <span className="flex-1 h-px bg-amber-300/15" />
+        <span>dbt</span>
+        <span className="flex-1 h-px bg-amber-300/15" />
+        <span>snowflake</span>
+        <span className="flex-1 h-px bg-amber-300/15" />
+        <span className="text-amber-200/80">power bi</span>
+      </div>
+    </div>
+  )
+}
+
+function pickViz(t: CorporateProject['vizType']) {
+  if (t === 'atlas') return <AtlasViz />
+  if (t === 'valuation') return <ValuationViz />
+  return null
+}
+
 export function CorporateProjects() {
   return (
     <section id="corporate-projects" className="py-28 px-6">
@@ -162,6 +314,7 @@ export function CorporateProjects() {
         >
           {CORPORATE_PROJECTS.map(p => {
             const isFeatured = !!p.featured
+            const viz = pickViz(p.vizType)
             if (isFeatured) {
               return (
                 <motion.div
@@ -195,6 +348,38 @@ export function CorporateProjects() {
                     </div>
                     <div className="relative min-h-[320px] lg:min-h-0 border-t lg:border-t-0 lg:border-l border-amber-300/15 bg-gradient-to-br from-amber-400/[0.04] via-transparent to-amber-300/[0.02] flex items-center justify-center p-6">
                       <DocuSearchViz />
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            }
+            if (viz) {
+              return (
+                <motion.div
+                  key={p.name}
+                  variants={staggerItem}
+                  whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+                  className="relative glass-card overflow-hidden h-full sm:col-span-2 hover:border-amber-400/30 transition-colors duration-300"
+                >
+                  <div className="grid lg:grid-cols-[1.1fr_1fr]">
+                    <div className="p-5 sm:p-6 flex flex-col gap-4">
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="font-mono text-amber-300/90 text-sm font-semibold leading-snug">{p.name}</h3>
+                        <span className="flex items-center gap-1.5 shrink-0 mt-0.5 text-amber-400/70">
+                          <LockIcon />
+                          <span className="text-[10px] font-mono uppercase tracking-wider">Confidential</span>
+                        </span>
+                      </div>
+                      <p className="font-mono text-xs text-muted">{p.attribution}</p>
+                      <p className="text-gray-400 leading-relaxed flex-1 text-sm">{p.description}</p>
+                      <div className="flex flex-wrap gap-1.5 pt-1 border-t border-white/[0.06]">
+                        {p.stack.map(t => (
+                          <span key={t} className="px-2 py-0.5 rounded-md text-xs font-mono border bg-white/[0.04] border-white/[0.06] text-muted">{t}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="relative min-h-[320px] lg:min-h-0 border-t lg:border-t-0 lg:border-l border-amber-300/15 bg-gradient-to-br from-amber-400/[0.03] via-transparent to-amber-300/[0.02] flex items-center justify-center p-6">
+                      {viz}
                     </div>
                   </div>
                 </motion.div>

@@ -30,6 +30,9 @@ const config: Config = {
         'maze-solve': 'maze-solve 5s ease-in-out infinite',
         'doc-scan': 'doc-scan 5s ease-in-out infinite',
         'match-reveal': 'match-reveal 5s ease-in-out infinite',
+        'bar-grow': 'bar-grow 6s ease-in-out infinite',
+        'atlas-flow': 'atlas-flow 6s ease-in-out infinite',
+        'atlas-stage': 'atlas-stage 6s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: { from: { opacity: '0', transform: 'translateY(10px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
@@ -48,6 +51,26 @@ const config: Config = {
         'match-reveal': {
           '0%, 100%': { opacity: '0', transform: 'translateY(4px)' },
           '38%, 85%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'bar-grow': {
+          '0%, 100%': { transform: 'scaleY(0)' },
+          '22%': { transform: 'scaleY(var(--bar))' },
+          '85%': { transform: 'scaleY(var(--bar))' },
+        },
+        'atlas-flow': {
+          '0%': { left: '0%', opacity: '1' },
+          '20%': { left: '0%' },
+          '30%': { left: '33.33%' },
+          '45%': { left: '33.33%' },
+          '55%': { left: '66.66%' },
+          '70%': { left: '66.66%' },
+          '85%': { left: '100%', opacity: '1' },
+          '95%': { left: '100%', opacity: '0' },
+          '100%': { left: '0%', opacity: '0' },
+        },
+        'atlas-stage': {
+          '0%, 100%': { opacity: '0.35', transform: 'scale(1)' },
+          '22%, 32%': { opacity: '1', transform: 'scale(1.25)' },
         },
       },
     },
