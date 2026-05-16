@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/ui/SectionWrapper'
 import { staggerContainer, staggerItem } from '@/lib/animations'
@@ -8,16 +9,16 @@ interface Company {
   blurb: string
   accent: string
   bg: string
-  textClass: string
+  logo: string
 }
 
 const COMPANIES: Company[] = [
-  { name: 'S&P Global',               blurb: 'Financial Data & Analytics', accent: '#E40023', bg: 'bg-[#0a0a0a]', textClass: 'text-white font-bold tracking-tight' },
-  { name: 'AMC Networks',             blurb: 'Media',                      accent: '#3B82F6', bg: 'bg-[#0E2A4A]', textClass: 'text-white font-bold tracking-tight uppercase' },
-  { name: 'Manulife · John Hancock',  blurb: 'Financial Services',         accent: '#00A758', bg: 'bg-white',     textClass: 'text-[#1a1a1a] font-semibold' },
-  { name: 'Octus',                    blurb: 'Private Credit Intelligence', accent: '#00C2B8', bg: 'bg-[#0B1416]', textClass: 'text-white font-bold tracking-tight' },
-  { name: 'Alvarez & Marsal',         blurb: 'Consulting',                 accent: '#1E40AF', bg: 'bg-white',     textClass: 'text-[#0E2A4A] font-semibold' },
-  { name: 'Blockchain Founders Fund', blurb: 'Venture Capital',            accent: '#F97316', bg: 'bg-[#0a0a0a]', textClass: 'text-white font-bold tracking-wide uppercase text-xs sm:text-sm' },
+  { name: 'S&P Global',               blurb: 'Financial Data & Analytics', accent: '#FFFFFF', bg: 'bg-[#DA1F26]',                                logo: '/logos/sp-global.jpg' },
+  { name: 'AMC Networks',             blurb: 'Media',                      accent: '#FFFFFF', bg: 'bg-gradient-to-br from-[#5fa84e] to-[#1a8fb5]', logo: '/logos/amc-networks.jpg' },
+  { name: 'John Hancock',             blurb: 'Financial Services',         accent: '#FFFFFF', bg: 'bg-[#0000DC]',                                logo: '/logos/john-hancock.jpg' },
+  { name: 'Octus',                    blurb: 'Private Credit Intelligence', accent: '#FFFFFF', bg: 'bg-[#3E32FF]',                                logo: '/logos/octus.jpg' },
+  { name: 'Alvarez & Marsal',         blurb: 'Consulting',                 accent: '#0E2A4A', bg: 'bg-white',                                    logo: '/logos/alvarez-marsal.jpg' },
+  { name: 'Blockchain Founders Fund', blurb: 'Venture Capital',            accent: '#F97316', bg: 'bg-white',                                    logo: '/logos/blockchain-founders-fund.jpg' },
 ]
 
 export function Experience() {
@@ -44,17 +45,20 @@ export function Experience() {
               className={`relative aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden border border-white/[0.08] ${c.bg} group`}
             >
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ boxShadow: `inset 0 0 0 1px ${c.accent}66` }}
+                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                style={{ boxShadow: `inset 0 0 0 2px ${c.accent}66` }}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-6">
-                <span className={`text-center text-base sm:text-xl ${c.textClass}`}>{c.name}</span>
+              <div className="absolute inset-0 flex items-center justify-center p-5">
+                <Image
+                  src={c.logo}
+                  alt={c.name}
+                  fill
+                  sizes="(min-width: 1024px) 220px, (min-width: 640px) 30vw, 45vw"
+                  className="object-contain p-4"
+                />
               </div>
-              <div
-                className="absolute bottom-0 left-0 right-0 px-4 py-2 font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ color: c.accent }}
-              >
-                {c.blurb}
+              <div className="absolute inset-x-0 bottom-0 px-3 py-2 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-white/90">{c.blurb}</span>
               </div>
             </motion.div>
           ))}
