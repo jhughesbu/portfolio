@@ -21,7 +21,7 @@ export function Contact() {
         <SectionWrapper>
           <p className="font-mono text-green text-sm mb-3">06. contact</p>
           <h2 className="section-heading">Let&apos;s Build Something</h2>
-          <p className="text-gray-400 text-[15px] max-w-md mb-14 leading-relaxed">Whether it&apos;s a project idea, a collaboration, or just a good conversation — I&apos;m reachable. No pitch decks required.</p>
+          <p className="text-gray-400 text-[15px] max-w-md mb-14 leading-relaxed">Whether it&apos;s a project idea, a collaboration, or just a good conversation, I&apos;m reachable. No pitch decks required.</p>
         </SectionWrapper>
         <motion.div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-40px' }}>
           {LINKS.map(link => (

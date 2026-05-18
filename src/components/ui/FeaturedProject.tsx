@@ -7,9 +7,9 @@ interface FeaturedProjectProps { repo: GitHubRepo }
 const STACK = ['Vapi.ai', 'GPT-4o', 'Express', 'Airtable', 'Node.js']
 
 const TRANSCRIPT = [
-  { who: 'agent', text: 'Hi, this is Summit Air — how can I help?' },
+  { who: 'agent', text: 'Hi, this is Summit Air. How can I help?' },
   { who: 'caller', text: 'My AC stopped cooling this morning.' },
-  { who: 'agent', text: 'Got it. I can get a tech out today between 2 and 4pm — does that work?' },
+  { who: 'agent', text: 'Got it. I can get a tech out today between 2 and 4pm. Does that work?' },
 ]
 
 export function FeaturedProject({ repo }: FeaturedProjectProps) {
@@ -34,7 +34,7 @@ export function FeaturedProject({ repo }: FeaturedProjectProps) {
           </div>
 
           <div className="space-y-3 text-gray-400 text-[15px] leading-relaxed">
-            <p>HVAC shops bleed revenue when calls go unanswered — emergencies pile up, schedules slip, and customers walk to the next listing. Summit Air is a 24/7 voice agent that picks up the line, triages the issue, and books the right tech to the right job.</p>
+            <p>HVAC shops bleed revenue when calls go unanswered. Emergencies pile up, schedules slip, and customers walk to the next listing. Summit Air is a 24/7 voice agent that picks up the line, triages the issue, and books the right tech to the right job.</p>
             <p>Built on Vapi.ai with GPT-4o for natural conversation, an Express backend for scheduling logic, and Airtable as the source of truth for jobs, customers, and emergency flags. Every call is logged and routed without a human in the loop.</p>
           </div>
 

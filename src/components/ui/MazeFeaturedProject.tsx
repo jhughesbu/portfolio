@@ -103,7 +103,7 @@ export function MazeFeaturedProject({ repo }: MazeFeaturedProjectProps) {
           </div>
 
           <div className="space-y-3 text-gray-400 text-[15px] leading-relaxed">
-            <p>Random mazes generated on the fly with Kruskal&apos;s algorithm, then DFS and BFS race to solve them. A manual-solve mode lets the player try first — useful for building intuition before the algorithms take over.</p>
+            <p>Random mazes generated on the fly with Kruskal&apos;s algorithm, then DFS and BFS race to solve them. A manual-solve mode lets the player try first, which builds intuition before the algorithms take over.</p>
             <p>One program, three distinct algorithm families: a generator and two solvers sharing the same grid representation. The kind of classic CS project that quietly proves you can model a problem cleanly before you reach for a library.</p>
           </div>
 

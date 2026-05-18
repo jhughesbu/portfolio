@@ -18,7 +18,7 @@ export function Hero() {
           I&apos;m a{' '}<TypewriterText words={WORDS} />
         </h1>
         <p className="text-gray-400 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          I build things that work — and I can sit in the room and explain them. Products, tools, and systems from idea to production, deployed alongside the people who use them.
+          I build things that work, and I can sit in the room and explain them. Products, tools, and systems from idea to production, deployed alongside the people who use them.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
           <button onClick={() => document.getElementById('corporate-projects')?.scrollIntoView({ behavior: 'smooth' })} className="px-7 py-3 bg-green text-bg font-semibold text-sm rounded-lg hover:bg-green/90 active:scale-95 transition-all duration-150 font-mono">

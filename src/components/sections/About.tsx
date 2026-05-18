@@ -10,9 +10,9 @@ export function About() {
               <p className="font-mono text-green text-sm mb-3">01. about</p>
               <h2 className="section-heading">Who I Am</h2>
               <div className="space-y-4 text-gray-400 leading-relaxed text-[15px]">
-                <p>I&apos;m Jack — a builder who sits at the intersection of product thinking, technical execution, and the conversation that connects the two. I&apos;m most at home when I&apos;m embedded with a customer: scoping the real problem, picking the right stack, and getting something live in front of them.</p>
-                <p>My background spans both the business side and the code side — a FinTech concentration at Northeastern, now a Master&apos;s in Data Science at Boston University. I&apos;ve built automation pipelines, BI reporting, web products, and more — the kind of stuff where you own the whole thing, not just one layer. I care less about titles and more about whether the thing works and the person across the table trusts it.</p>
-                <p>Outside of building things, I&apos;m drawn to how technology actually changes how people work — not the hype, but the real shifts. I&apos;m also a steak-cooking aficionado, a corporate basketball league champ, and someone who reads too much about things he doesn&apos;t need to know.</p>
+                <p>I&apos;m Jack, a builder who sits at the intersection of product thinking, technical execution, and the conversation that connects the two. I&apos;m most at home when I&apos;m embedded with a customer: scoping the real problem, picking the right stack, and getting something live in front of them.</p>
+                <p>My background spans both the business side and the code side, with a FinTech concentration at Northeastern and now a Master&apos;s in Data Science at Boston University. I&apos;ve built automation pipelines, BI reporting, web products, and more. The kind of stuff where you own the whole thing, not just one layer. I care less about titles and more about whether the thing works and the person across the table trusts it.</p>
+                <p>Outside of building things, I&apos;m drawn to how technology actually changes how people work, not the hype but the real shifts. I&apos;m also a steak-cooking aficionado, a corporate basketball league champ, and someone who reads too much about things he doesn&apos;t need to know.</p>
               </div>
             </div>
             <div className="glass-card overflow-hidden">

@@ -16,36 +16,36 @@ interface CorporateProject {
 const CORPORATE_PROJECTS: CorporateProject[] = [
   {
     name: 'DocuSearch',
-    attribution: 'S&P Global — Automation Manager',
+    attribution: 'S&P Global · Automation Manager',
     award: '1st Place · i3 AI Hackathon',
-    description: 'Led a team of developers and subject-matter experts to take 1st place at the i3 AI Hackathon — selected over 400 teams and 1,000+ participants by a panel of C-suite judges. The winning product: a full-stack LLM-driven document search tool, originally a Flask web app on the internal Spark API with bulk DOCX ingest, similarity scoring, WebSocket progress, and parallel processing. Later re-architected as a custom RAG pipeline on Databricks that ingests, parses, and semantically indexes 1,000+ equity and multi-asset methodology documents — enabling natural-language search, variant detection, and automated editing at scale.',
+    description: 'Led a team of developers and subject-matter experts to take 1st place at the i3 AI Hackathon, selected over 400 teams and 1,000+ participants by a panel of C-suite judges. The winning product: a full-stack LLM-driven document search tool, originally a Flask web app on the internal Spark API with bulk DOCX ingest, similarity scoring, WebSocket progress, and parallel processing. Later re-architected as a custom RAG pipeline on Databricks that ingests, parses, and semantically indexes 1,000+ equity and multi-asset methodology documents, enabling natural-language search, variant detection, and automated editing at scale.',
     stack: ['Flask', 'Python', 'Spark API', 'Databricks', 'RAG', 'WebSockets'],
     featured: true,
   },
   {
     name: 'Atlas',
-    attribution: 'S&P Global — Automation Manager',
-    description: 'Led the build of a full-stack application that centralizes ETF launch and workflow tracking across the org. Replaced fragmented trackers and email threads with a single source of truth — saving ~20 hours a week across 200+ global stakeholders and giving leadership real-time visibility into every launch in flight.',
+    attribution: 'S&P Global · Automation Manager',
+    description: 'Led the build of a full-stack application that centralizes ETF launch and workflow tracking across the org. Replaced fragmented trackers and email threads with a single source of truth, saving ~20 hours a week across 200+ global stakeholders and giving leadership real-time visibility into every launch in flight.',
     stack: ['Power Apps', 'Power Automate', 'Power BI', 'SharePoint', 'Databricks', 'Jira', 'REST APIs'],
     vizType: 'atlas',
   },
   {
     name: 'P/E Valuation Pipelines & Dashboards',
-    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
-    description: 'Launched a Power BI dashboard and end-to-end ETL system serving private equity clients including General Atlantic, Silver Lake, and Patient Square Capital — credited with ~$1M in revenue impact by deepening data analytics for equity client services. Built and maintained the pipelines in Python and SQL with dbt, AWS (EC2, Lambda, S3), and Airflow orchestration, landing the data in Snowflake for Power BI to sit on top.',
+    attribution: 'Alvarez & Marsal · Forward Deployed Engineer, Private Equity',
+    description: 'Launched a Power BI dashboard and end-to-end ETL system serving private equity clients including General Atlantic, Silver Lake, and Patient Square Capital, credited with ~$1M in revenue impact by deepening data analytics for equity client services. Built and maintained the pipelines in Python and SQL with dbt, AWS (EC2, Lambda, S3), and Airflow orchestration, landing the data in Snowflake for Power BI to sit on top.',
     stack: ['Python', 'SQL', 'dbt', 'AWS', 'Airflow', 'Snowflake', 'Power BI'],
     vizType: 'valuation',
   },
   {
     name: 'Valuation Collection Automation',
-    attribution: 'Alvarez & Marsal — Forward Deployed Engineer, Private Equity',
-    description: 'Replaced the manual valuation-request workflow — thousands of emails and Excel attachments each quarter — with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submission lands in Snowflake. Cut quarterly completion time by ~60 hours.',
+    attribution: 'Alvarez & Marsal · Forward Deployed Engineer, Private Equity',
+    description: 'Replaced the manual valuation-request workflow (thousands of emails and Excel attachments each quarter) with an automated intake system. Power Apps forms collect responses from PE firms, Power Automate routes follow-ups by portfolio company and file urgency/type, and every submission lands in Snowflake. Cut quarterly completion time by ~60 hours.',
     stack: ['Python', 'Power Automate', 'Power Apps', 'Snowflake', 'M365'],
   },
   {
     name: 'Sales Intelligence Dashboards',
-    attribution: 'Octus (formerly Reorg) — Business Intelligence Developer',
-    description: 'Built dynamic Power BI sales dashboards that supported the achievement of a $118M business target, with optimized SQL queries running against 100M+ data points in Snowflake. Also designed and ran A/B testing on Reorg\'s new bankruptcy algorithm features and UX — feedback that drove higher client adoption of the product.',
+    attribution: 'Octus (formerly Reorg) · Business Intelligence Developer',
+    description: 'Built dynamic Power BI sales dashboards that supported the achievement of a $118M business target, with optimized SQL queries running against 100M+ data points in Snowflake. Also designed and ran A/B testing on Reorg\'s new bankruptcy algorithm features and UX, with feedback that drove higher client adoption of the product.',
     stack: ['Power BI', 'SQL', 'Snowflake', 'A/B Testing'],
   },
 ]
@@ -303,7 +303,7 @@ export function CorporateProjects() {
         <SectionWrapper>
           <p className="font-mono text-green text-sm mb-3">03. corporate projects</p>
           <h2 className="section-heading">Corporate Projects</h2>
-          <p className="text-muted text-sm font-mono mb-12">client and employer work — under NDA, but here&apos;s the gist</p>
+          <p className="text-muted text-sm font-mono mb-12">client and employer work, under NDA but here&apos;s the gist</p>
         </SectionWrapper>
         <motion.div
           className="grid sm:grid-cols-2 gap-5"

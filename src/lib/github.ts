@@ -3,7 +3,7 @@ import type { GitHubRepo } from '@/types/github'
 export const FALLBACK_REPOS: GitHubRepo[] = [
   {
     id: 1, name: 'summit-air',
-    description: 'AI-powered inbound call handler for HVAC. Built on Vapi.ai and GPT-4o — handles scheduling triage, books appointments, flags emergencies, and logs everything to Airtable.',
+    description: 'AI-powered inbound call handler for HVAC. Built on Vapi.ai and GPT-4o. Handles scheduling triage, books appointments, flags emergencies, and logs everything to Airtable.',
     html_url: 'https://github.com/jhughesbu/summit-air', homepage: null, language: 'JavaScript', stargazers_count: 0,
     topics: ['voice-ai', 'vapi', 'gpt-4o', 'express', 'airtable'],
   },
@@ -14,7 +14,7 @@ export const FALLBACK_REPOS: GitHubRepo[] = [
 export const EXTRA_PROJECTS: GitHubRepo[] = [
   {
     id: 1000, name: 'summit-air',
-    description: 'AI-powered inbound call handler for HVAC. Built on Vapi.ai and GPT-4o — handles scheduling triage, books appointments, flags emergencies, and logs everything to Airtable.',
+    description: 'AI-powered inbound call handler for HVAC. Built on Vapi.ai and GPT-4o. Handles scheduling triage, books appointments, flags emergencies, and logs everything to Airtable.',
     html_url: 'https://github.com/jhughesbu/summit-air', homepage: null, language: 'JavaScript', stargazers_count: 0,
     topics: ['voice-ai', 'vapi', 'gpt-4o', 'express', 'airtable'],
   },
@@ -26,13 +26,13 @@ export const EXTRA_PROJECTS: GitHubRepo[] = [
   },
   {
     id: 1001, name: 'The-Maze',
-    description: 'Java maze app — generates random mazes with Kruskal\'s algorithm, then races DFS and BFS to find the exit. Includes a manual-solve mode so the player can try it themselves.',
+    description: 'Java maze app that generates random mazes with Kruskal\'s algorithm, then races DFS and BFS to find the exit. Includes a manual-solve mode so the player can try it themselves.',
     html_url: 'https://github.com/jhughes33/The-Maze', homepage: null, language: 'Java', stargazers_count: 0,
     topics: ['algorithms', 'kruskal', 'dfs', 'bfs', 'pathfinding'],
   },
   {
     id: 1002, name: 'Pyramid-Solitaire',
-    description: 'Pyramid Solitaire built in Java with a clean MVC split — model holds the game state and rules, view/controller handles play, and cards are modeled through interfaces with dedicated Suit and Number classes.',
+    description: 'Pyramid Solitaire built in Java with a clean MVC split. Model holds the game state and rules, view/controller handles play, and cards are modeled through interfaces with dedicated Suit and Number classes.',
     html_url: 'https://github.com/jhughes33/Pyramid-Solitaire', homepage: null, language: 'Java', stargazers_count: 0,
     topics: ['java', 'mvc', 'oop', 'interfaces', 'game'],
   },
