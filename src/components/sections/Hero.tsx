@@ -24,8 +24,8 @@ export function Hero() {
           <button onClick={() => document.getElementById('corporate-projects')?.scrollIntoView({ behavior: 'smooth' })} className="px-7 py-3 bg-green text-bg font-semibold text-sm rounded-lg hover:bg-green/90 active:scale-95 transition-all duration-150 font-mono">
             See My Work
           </button>
-          <a href="https://github.com/jhughesbu" target="_blank" rel="noopener noreferrer" className="px-7 py-3 border border-white/20 text-gray-300 font-semibold text-sm rounded-lg hover:border-green/40 hover:text-white active:scale-95 transition-all duration-150 font-mono">
-            GitHub
+          <a href="https://www.linkedin.com/in/jack-hughes-neu" target="_blank" rel="noopener noreferrer" className="px-7 py-3 border border-white/20 text-gray-300 font-semibold text-sm rounded-lg hover:border-green/40 hover:text-white active:scale-95 transition-all duration-150 font-mono">
+            LinkedIn
           </a>
           <a href="/Jack_Hughes_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-7 py-3 border border-white/20 text-gray-300 font-semibold text-sm rounded-lg hover:border-green/40 hover:text-white active:scale-95 transition-all duration-150 font-mono">
             Resume
