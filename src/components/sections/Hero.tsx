@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { AnimatedGridBg } from '@/components/ui/AnimatedGridBg'
 import { TypewriterText } from '@/components/ui/TypewriterText'
 
-const WORDS = ['Builder.', 'Maker.', 'Communicator.', 'Shipper.', 'FDE.']
+const WORDS = ['Maker.', 'FDE.', 'Communicator.', 'Product Manager.', 'Builder.', 'Shipper.']
 
 export function Hero() {
   return (
