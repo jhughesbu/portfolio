@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { AnimatedGridBg } from '@/components/ui/AnimatedGridBg'
 import { TypewriterText } from '@/components/ui/TypewriterText'
 
-const WORDS = ['Maker.', 'FDE.', 'Communicator.', 'Product Manager.', 'Builder.', 'Shipper.']
+const WORDS = ['a Maker.', 'an FDE.', 'a Communicator.', 'a Product Manager.', 'a Builder.', 'a Shipper.']
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
         </div>
         <p className="font-mono text-base sm:text-lg text-green mb-4 animate-fade-in">I&apos;m Jack Hughes</p>
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-          I&apos;m a{' '}<TypewriterText words={WORDS} />
+          I&apos;m{' '}<TypewriterText words={WORDS} />
         </h1>
         <p className="text-gray-400 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
           I build things that work, and I can sit in the room and explain them. Products, tools, and systems from idea to production, deployed alongside the people who use them.
