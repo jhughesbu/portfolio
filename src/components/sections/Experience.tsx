@@ -9,10 +9,11 @@ interface Company {
   blurb: string
   accent: string
   bg: string
-  logo: string
+  logo?: string
 }
 
 const COMPANIES: Company[] = [
+  { name: 'Salesforce',               blurb: 'Forward Deployed Engineer',   accent: '#FFFFFF', bg: 'bg-[#00A1E0]' },
   { name: 'S&P Global',               blurb: 'Financial Data & Analytics', accent: '#FFFFFF', bg: 'bg-[#DA1F26]',                                logo: '/logos/sp-global.jpg' },
   { name: 'AMC Networks',             blurb: 'Media',                      accent: '#FFFFFF', bg: 'bg-gradient-to-br from-[#5fa84e] to-[#1a8fb5]', logo: '/logos/amc-networks.jpg' },
   { name: 'John Hancock',             blurb: 'Financial Services',         accent: '#FFFFFF', bg: 'bg-[#0000DC]',                                logo: '/logos/john-hancock.jpg' },
@@ -49,13 +50,19 @@ export function Experience() {
                 style={{ boxShadow: `inset 0 0 0 2px ${c.accent}66` }}
               />
               <div className="absolute inset-0 flex items-center justify-center p-5">
-                <Image
-                  src={c.logo}
-                  alt={c.name}
-                  fill
-                  sizes="(min-width: 1024px) 220px, (min-width: 640px) 30vw, 45vw"
-                  className="object-contain p-4"
-                />
+                {c.logo ? (
+                  <Image
+                    src={c.logo}
+                    alt={c.name}
+                    fill
+                    sizes="(min-width: 1024px) 220px, (min-width: 640px) 30vw, 45vw"
+                    className="object-contain p-4"
+                  />
+                ) : (
+                  <span className="font-sans font-bold text-2xl sm:text-3xl text-white tracking-tight text-center">
+                    {c.name}
+                  </span>
+                )}
               </div>
               <div className="absolute inset-x-0 bottom-0 px-3 py-2 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-white/90">{c.blurb}</span>
