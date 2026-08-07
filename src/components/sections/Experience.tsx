@@ -13,7 +13,7 @@ interface Company {
 }
 
 const COMPANIES: Company[] = [
-  { name: 'Salesforce',               blurb: 'Forward Deployed Engineer',   accent: '#00A1E0', bg: 'bg-white',                                    logo: '/logos/salesforce.png' },
+  { name: 'Salesforce',               blurb: 'Forward Deployed Engineer',   accent: '#FFFFFF', bg: 'bg-[#00A1E0]' },
   { name: 'S&P Global',               blurb: 'Financial Data & Analytics', accent: '#FFFFFF', bg: 'bg-[#DA1F26]',                                logo: '/logos/sp-global.jpg' },
   { name: 'AMC Networks',             blurb: 'Media',                      accent: '#FFFFFF', bg: 'bg-gradient-to-br from-[#5fa84e] to-[#1a8fb5]', logo: '/logos/amc-networks.jpg' },
   { name: 'John Hancock',             blurb: 'Financial Services',         accent: '#FFFFFF', bg: 'bg-[#0000DC]',                                logo: '/logos/john-hancock.jpg' },
