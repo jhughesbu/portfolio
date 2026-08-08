@@ -29,6 +29,7 @@ export const SKILLS: Skill[] = [
   { name: 'AWS', icon: 'aws', category: 'Cloud & Infra' },
   { name: 'Azure', icon: 'azure', category: 'Cloud & Infra' },
   { name: 'BigQuery', icon: 'bigquery', category: 'Cloud & Infra' },
+  { name: 'Snowflake', icon: 'snowflake', category: 'Cloud & Infra' },
   { name: 'Vercel', icon: 'vercel', category: 'Cloud & Infra' },
   { name: 'Railway', icon: 'railway', category: 'Cloud & Infra' },
   { name: 'GitHub', icon: 'github', category: 'Cloud & Infra' },
